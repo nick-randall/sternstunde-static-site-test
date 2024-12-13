@@ -5,7 +5,7 @@ type Artist = {
 }
 
 export default async function Home() {
-  const url =  "http://localhost:8080" //"https://sternstunde.fly.dev"
+  const url =  "https://sternstunde.fly.dev" // "http://localhost:8080" //
   const headers = { Accept: "application/json" };
   const response = await fetch(`${url}/get-artists`, { headers });
   const artists: Artist[] = await response.json();
